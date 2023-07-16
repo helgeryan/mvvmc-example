@@ -59,6 +59,4 @@ extension AppCoordinator: HomeCoordinatorDelegate {
     func didFinish(_ coordinator: HomeCoordinator) {
         
     }
-    
-    
 }
