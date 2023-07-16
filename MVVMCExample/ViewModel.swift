@@ -5,19 +5,18 @@
 //  Created by Ryan Helgeson on 7/16/23.
 //
 
-
 import Foundation
 
-protocol LoginNavigation : AnyObject{
+protocol AuthNavigation : AnyObject{
     func goToLoginPage()
     func goToRegisterPage()
     func goToHome()
 }
 
-class LoginViewModel {
-    weak var navigation : LoginNavigation!
+class AuthViewModel {
+    var navigation : AuthNavigation
     
-    init(nav : LoginNavigation) {
+    init(nav : AuthNavigation) {
         self.navigation = nav
     }
     
@@ -29,24 +28,7 @@ class LoginViewModel {
         navigation.goToHome()
     }
     
-    deinit {
-        print("Deinit login")
-    }
-}
-
-
-protocol RegisterNavigation : AnyObject{
-    func goToLoginPage()
-}
-
-class RegisterViewModel {
-    weak var navigation : RegisterNavigation!
-    
-    init(nav : RegisterNavigation) {
-        self.navigation = nav
-    }
-    
-    func goToLogin(){
+    func goToLogin() {
         navigation.goToLoginPage()
     }
 }
