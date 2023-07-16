@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="MVVMCExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sG-1K-W1j">
+                                <rect key="frame" x="20" y="385" width="353" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="scM-Gj-JMI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVg-zI-bd0">
+                                <rect key="frame" x="131.66666666666666" y="421" width="129.99999999999997" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="UJu-l8-Ioj"/>
+                                    <constraint firstAttribute="height" constant="35" id="qKu-BA-otQ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Register Page"/>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0K5-xT-gpv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sVg-zI-bd0" firstAttribute="top" secondItem="3sG-1K-W1j" secondAttribute="bottom" constant="15" id="9J4-gu-mAQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3sG-1K-W1j" secondAttribute="trailing" constant="20" id="AC6-lG-Mj2"/>
+                            <constraint firstItem="sVg-zI-bd0" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Lfd-pA-Fwl"/>
+                            <constraint firstItem="sVg-zI-bd0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="M0W-Xb-rY1"/>
+                            <constraint firstItem="3sG-1K-W1j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TYy-Yc-iff"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="registerButton" destination="sVg-zI-bd0" id="z2Q-7Z-YAZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="4"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="pe3-1r-XHe">
+            <objects>
+                <viewController storyboardIdentifier="RegisterViewController" id="9hM-J6-1Sb" customClass="RegisterViewController" customModule="MVVMCExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lxb-Mh-dno">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5o-sn-kbi">
+                                <rect key="frame" x="20" y="385" width="353" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="n0w-SK-nS8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjm-AC-XFp">
+                                <rect key="frame" x="96.666666666666686" y="421" width="200" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Qfn-Xp-36u"/>
+                                    <constraint firstAttribute="height" constant="35" id="d2a-Uj-UiJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back to Login Page"/>
+                                <connections>
+                                    <action selector="backToLoginTapped:" destination="9hM-J6-1Sb" eventType="touchUpInside" id="zZc-nj-Ykr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5oW-pK-qHh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jjm-AC-XFp" firstAttribute="top" secondItem="B5o-sn-kbi" secondAttribute="bottom" constant="15" id="0Oh-hC-iad"/>
+                            <constraint firstItem="5oW-pK-qHh" firstAttribute="trailing" secondItem="B5o-sn-kbi" secondAttribute="trailing" constant="20" id="8en-eP-nN9"/>
+                            <constraint firstItem="jjm-AC-XFp" firstAttribute="centerX" secondItem="5oW-pK-qHh" secondAttribute="centerX" id="kfu-04-lIV"/>
+                            <constraint firstItem="jjm-AC-XFp" firstAttribute="centerY" secondItem="5oW-pK-qHh" secondAttribute="centerY" id="oLV-bN-0Av"/>
+                            <constraint firstItem="B5o-sn-kbi" firstAttribute="leading" secondItem="5oW-pK-qHh" secondAttribute="leading" constant="20" id="vgn-N9-1HN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backToLoginButton" destination="jjm-AC-XFp" id="xkR-B6-91V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aCe-SV-SKh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
