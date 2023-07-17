@@ -15,15 +15,10 @@ protocol AuthCoordinatorDelegate {
 
 class AuthCoordinator : Coordinator {
     var delegate: AuthCoordinatorDelegate?
-    var children: [Coordinator] = []
-    var navigationController: UINavigationController
     var viewModel: AuthViewModel!
+    var navigationController = UINavigationController()
     
-    init(navigationController : UINavigationController) {
-        self.navigationController = navigationController
-    }
-    
-    func start() {
+    override func start() {
         print("AuthCoordinator Start")
         viewModel = AuthViewModel(nav: self)
         goToLoginPage()
@@ -33,10 +28,6 @@ class AuthCoordinator : Coordinator {
 
     deinit {
         print("AuthCoordinator Deinit")
-    }
-    
-    func childDidFinish(_ coordinator: Coordinator) {
-        
     }
 }
 

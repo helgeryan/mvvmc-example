@@ -15,28 +15,19 @@ protocol HomeCoordinatorDelegate {
 
 class HomeCoordinator : Coordinator {
     var delegate: HomeCoordinatorDelegate?
-    var children: [Coordinator] = []
-    var navigationController: UINavigationController
     var viewModel: HomeViewModel!
+    var navigationController = UINavigationController()
+    let storyboard = UIStoryboard.init(name: "Home", bundle: nil)
     
-    init(navigationController : UINavigationController) {
-        self.navigationController = navigationController
-    }
-    
-    func start() {
+    override func start() {
         print("HomeCoordinator Start")
         viewModel = HomeViewModel(nav: self)
         goToHomePage()
     }
     
-    let storyboard = UIStoryboard.init(name: "Home", bundle: nil)
 
     deinit {
         print("HomeCoordinator Deinit")
-    }
-    
-    func childDidFinish(_ coordinator: Coordinator) {
-        
     }
     
     func goToHomePage() {
